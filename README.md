@@ -42,7 +42,7 @@ Pour démarrer les serveurs, vous devez instancier les conteneurs listés et con
 
 À ce moment, vous avez accès au serveur via `http://localhost`
 
-L’application de gestion de base de données Adminer est disponible à l’adresse `http://localhost:8080`
+J’ai ajouté l’application de gestion de base de données [Adminer](https://www.adminer.org) à la stack d’origine. Elle est disponible à l’adresse `http://localhost:8080`
 
 ## Un terminal ? 
 
