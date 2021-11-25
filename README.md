@@ -44,6 +44,8 @@ Pour démarrer les serveurs, vous devez instancier les conteneurs listés et con
 
 J’ai ajouté l’application de gestion de base de données [Adminer](https://www.adminer.org) à la stack d’origine. Elle est disponible à l’adresse `http://localhost:8080`
 
+L’accès à MariaDB par une application est possible sur l’adresse locale, port 3306, comme d’habitude.
+
 ## Un terminal ? 
 
 Attention, le terminal de votre machine tape des commandes dans le contexte de votre machine. Sur ma machine par exemple, je n’ai pas installé PHP, COMPOSER, NGINX, ou MARIADB, et j’interagis pourtant via le terminal avec tous ces logiciels. Alors, comment ? 
