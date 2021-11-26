@@ -6,7 +6,7 @@ It is based on [https://github.com/stevenliebregt/docker-compose-lemp-stack](htt
 
 I use it only as a base environment to teach PHP in a School located in Liège, Belgium
 
-## Details
+## Détails
 
 Les versions les plus récentes disponibles au moment de la construction des conteneurs sont toujours utilisées.
 
