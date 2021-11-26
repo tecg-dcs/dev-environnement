@@ -1,6 +1,6 @@
 # Docker Compose LEMP Stack
 
-This repository contains a little `docker-compose` configuration to start a `LEMP (Linux, Nginx, MariaDB, PHP, Adminer)` stack.
+This repository contains a little `docker-compose` configuration to start a `LEMP (Linux, Nginx, MariaDB, PHP, Adminer, Node)` stack.
 
 It is based on [https://github.com/stevenliebregt/docker-compose-lemp-stack](https://github.com/stevenliebregt/docker-compose-lemp-stack)
 
