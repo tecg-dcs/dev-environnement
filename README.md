@@ -26,7 +26,7 @@ Le fichier docker-compose utilise une variable Unix (PWD) qui n’est pas reconn
 
 La configuration de Nginx est `config/nginx/`.
 
-Pour plus de facilité, un fichier d’environnement, `.env` est utilisé. Il permet de définir certaines valeurs à réutiliser dans le docker-compose.yml, comme par exemple, le nom du projet et les informations de connexion à la DB.
+Pour plus de facilité, un fichier d’environnement, `.env` est utilisé. Il permet de définir certaines valeurs à réutiliser dans le `docker-compose.yml, comme par exemple, le nom du projet et les informations de connexion à la DB.
 
 
 | Key | Description |
