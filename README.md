@@ -19,7 +19,7 @@ Le dossier dans lequel vous devez coder votre application PHP est `app/`, situé
 ## Configuration
 
 **UTILISATEURS DE WINDOWS**
-Si vous avez fait le choix dommageable de travailler avec une machine qui n’est pas équipée d’un système Unix/Linux, tout n’est pas perdu. Pour faire fonctionner Docker vous avez dû activer WSL2 et installer Ubuntu comme sous-système Linux sur votre Windows. Ouf. Les commandes qui suivent sont à taper dans le terminal d’Ubuntu. Pour rappel `cd /mnt/LETTRE_DE_DISQUE/Users/VOTRE_NOM/PATH_VERS_VOTRE_PROJET` vous placera dans le bon répertoire pour la suite des opérations.
+Si vous avez fait le choix regrettable de travailler avec une machine qui n’est pas équipée d’un système Unix/Linux, tout n’est pas perdu. Pour faire fonctionner Docker vous avez dû activer WSL2 et installer Ubuntu comme sous-système Linux sur votre Windows. Ouf. Les commandes qui suivent sont à taper dans le terminal d’Ubuntu. Pour rappel `cd /mnt/LETTRE_DE_DISQUE/Users/VOTRE_NOM/PATH_VERS_VOTRE_PROJET` vous placera dans le bon répertoire pour la suite des opérations.
 
 Le fichier docker-compose utilise une variable Unix (PWD) qui n’est pas reconnue dans un interpréteur de commande WINDOWS. Pensez-y !
 
