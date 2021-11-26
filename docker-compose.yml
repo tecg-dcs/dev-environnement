@@ -35,6 +35,7 @@ services:
 
   adminer:
     image: adminer:latest
+    container_name: ${APP_NAME:?err}-adminer
     environment:
       ADMINER_DEFAULT_SERVER: mariadb
     ports:

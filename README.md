@@ -12,9 +12,9 @@ Les versions les plus récentes disponibles au moment de la construction des con
 
 Le moteur de base de données utilisé est MariaDB. Ceci est non seulement une évolution souhaitable par rapport à MySQL mais aussi une exigence de compatibilité pour les Mac M1+ à l’heure où j’écris. 
 
-PHP est installé avec Composer.
+PHP est installé avec Composer, mais aussi avec git, zip, nodejs et npm 🎉. Ces deux derniers packages sont surtout là pour le cas où vous auriez besoin d’utiliser une dépendance front, mais dans le cadre du cours, la probabilité est assez faible.
 
-Le dossier dans lequel vous devez coder votre application PHP est app/, situé à la racine de ce repo une fois cloné sur votre machine.
+Le dossier dans lequel vous devez coder votre application PHP est `app/`, situé à la racine de ce repo une fois cloné sur votre machine.
 
 ## Configuration
 
@@ -48,7 +48,7 @@ Pour démarrer les serveurs, vous devez instancier les conteneurs listés et con
 
 À ce moment, vous avez accès au serveur via `http://localhost`
 
-J’ai ajouté l’application de gestion de base de données [Adminer](https://www.adminer.org) à la stack d’origine. Elle est disponible à l’adresse `http://localhost:8080`
+J’ai ajouté l’application de gestion de base de données [Adminer](https://www.adminer.org) à la stack d’origine. Elle est disponible à l’adresse `http://localhost:8080`. Notez qu’elle utilise son propre moteur PHP, en version 7.4. C’est sans importance pour vos développements qui peuvent se faire pour la dernière version de PHP disponible.
 
 L’accès à MariaDB par une application est possible sur l’adresse locale, port 3306, comme d’habitude.
 
