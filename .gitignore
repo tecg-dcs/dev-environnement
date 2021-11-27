@@ -1,4 +1,5 @@
 
 /app/vendor/
+/app/node_modules/
 /app/composer.json
 /app/composer.lock
