@@ -10,7 +10,7 @@ I use it only as a base environment to teach PHP in a School located in Liège, 
 
 Les versions les plus récentes disponibles au moment de la récupération des images sont toujours utilisées.
 
-Le moteur de base de données utilisé est MariaDB. Ceci est non seulement une évolution souhaitable par rapport à MySQL mais aussi une exigence de compatibilité pour les Mac M1+ à l’heure où j’écris. 
+Le moteur de base de données utilisé est MariaDB.
 
 PHP est installé avec Composer, mais aussi avec git, zip, nodejs et npm 🎉. Ces deux derniers packages sont surtout là pour le cas où vous auriez besoin d’utiliser une dépendance *front*, mais dans le cadre du cours, la probabilité est assez faible.
 
