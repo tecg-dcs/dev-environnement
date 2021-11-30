@@ -66,7 +66,7 @@ Vous devez remplacer {CONTAINER_NAME} par le nom du conteneur avec lequel vous v
 
 Par exemple si votre application est nommée myapp dans le fichier d’environnement, tapez `docker exec -it myapp-php composer require nesbot/carbon` pour installer Carbon à l’aide de *composer*.
 
-La commande précédente permet d’envoyer une commande vers l’interpréteur de commandes du conteneur, mais vous restez dans votre terminal. Pour taper plusieurs commandes d’affilée, vous devez refaire toute la commande précédente ou alors, si vous souhaitez garder le terminal du conteneur ouvert, vous pouvez utiliser `docker exec -it {CONTAINER_NAME} /bin/sh`
+La commande précédente permet d’envoyer une commande vers l’interpréteur de commandes du conteneur, mais vous restez dans le terminal de votre machine. Pour taper plusieurs commandes d’affilée, vous devez refaire toute la commande précédente ou alors, si vous souhaitez garder le terminal du conteneur ouvert, vous pouvez utiliser `docker exec -it {CONTAINER_NAME} /bin/sh`
 
 Par exemple, 
 ```
