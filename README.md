@@ -12,7 +12,7 @@ Les versions les plus récentes disponibles au moment de la récupération des i
 
 Le moteur de base de données utilisé est MariaDB.
 
-PHP est installé avec Composer, mais aussi avec git, zip, nodejs et npm 🎉. Ces deux derniers packages sont surtout là pour le cas où vous auriez besoin d’utiliser une dépendance *front*, mais dans le cadre du cours, la probabilité est assez faible.
+PHP est installé avec Composer, mais aussi avec git, zip, nodejs et npm 🎉. Ces deux derniers outils sont surtout là pour le cas où vous auriez besoin d’utiliser une dépendance *front*, mais dans le cadre du cours, la probabilité est assez faible.
 
 Le dossier dans lequel vous devez coder votre application PHP est `app/`, situé à la racine de ce repo une fois cloné sur votre machine.
 
