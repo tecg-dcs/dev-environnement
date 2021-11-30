@@ -42,7 +42,7 @@ Pour plus de facilité, un fichier d’environnement, `.env` est utilisé. Il pe
 
 ### Démarrez les serveurs.
 
-Pour démarrer les serveurs, vous devez instancier les conteneurs listés et configurés dans le fichier `docker-compose.yml` : `docker-compose up`.
+Pour démarrer les serveurs, vous devez entrer dans le dossier créé par la commande précédente `cd dev-environnement` et instancier les conteneurs listés et configurés dans le fichier `docker-compose.yml` : `docker-compose up`.
 
 À ce moment, vous avez accès au serveur via `http://localhost`
 
