@@ -44,11 +44,11 @@ Pour plus de facilité, un fichier d’environnement, `.env` est utilisé. Il pe
 
 Pour démarrer les serveurs, vous devez entrer dans le dossier créé par la commande précédente `cd dev-environnement` et instancier les conteneurs listés et configurés dans le fichier `docker-compose.yml` : `docker-compose up`.
 
-À ce moment, vous avez accès au serveur via `http://localhost`
+À ce moment, vous avez accès au serveur via `http://localhost`. Vous devriez voir la page d’information de PHP dans votre navigateur.
 
 J’ai ajouté l’application de gestion de base de données [Adminer](https://www.adminer.org) à la stack d’origine. Elle est disponible à l’adresse `http://localhost:8080`. Notez qu’elle utilise son propre moteur PHP, en version 7.4. C’est sans importance pour vos développements qui peuvent se faire pour la dernière version de PHP disponible.
 
-L’accès à MariaDB par une application externe (TablePlus, Terminal, PHPStorm, etc.) est possible sur l’adresse locale, port 3306, comme d’habitude.
+L’accès à MariaDB par une application externe (TablePlus, Terminal, PHPStorm, etc.) est possible via l’hôte `mariadb`, port 3306, comme d’habitude.
 
 ### Un terminal ? 
 
