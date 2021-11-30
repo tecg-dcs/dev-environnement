@@ -54,7 +54,7 @@ L’accès à MariaDB par une application externe (TablePlus, Terminal, PHPStorm
 
 Attention, le terminal de votre machine tape des commandes dans le contexte de votre machine. Sur ma machine par exemple, je n’ai pas installé PHP, COMPOSER, NGINX, ou MARIADB, et j’interagis pourtant via le terminal avec tous ces logiciels. Alors, comment ? La réponse est simple, vos conteneurs embarquent un système Linux et ils ont donc un interpréteur de commande. C’est cet interpréteur qui sera votre porte d’entrée dans le conteneur.
 
-Si vous avez besoin de taper des commandes dans le terminal d’un des conteneurs, dans votre terminal, tapez :
+Si vous avez besoin de taper des commandes dans le terminal d’un des conteneurs, dans le terminal de votre machine, tapez :
 
 `docker exec -ti {CONTAINER_NAME} [COMMAND]` 
 
