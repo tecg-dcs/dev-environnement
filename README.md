@@ -8,7 +8,7 @@ I use it only as a base environment to teach PHP in a School located in Liège, 
 
 ## Détails
 
-Les versions les plus récentes disponibles au moment de la construction des conteneurs sont toujours utilisées.
+Les versions les plus récentes disponibles au moment de la récupération des images sont toujours utilisées.
 
 Le moteur de base de données utilisé est MariaDB. Ceci est non seulement une évolution souhaitable par rapport à MySQL mais aussi une exigence de compatibilité pour les Mac M1+ à l’heure où j’écris. 
 
