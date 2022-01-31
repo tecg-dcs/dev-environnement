@@ -1,6 +1,6 @@
 # Docker Compose LEMP Stack
 
-This repository contains a little `docker-compose` configuration to start a `LEMP (Linux, Nginx, MariaDB, PHP, Adminer, Node)` stack.
+This repository contains a `docker-compose` configuration to start a `LEMP (Linux, Nginx, MariaDB, PHP, Adminer, Node)` stack.
 
 It is based on [https://github.com/stevenliebregt/docker-compose-lemp-stack](https://github.com/stevenliebregt/docker-compose-lemp-stack)
 
@@ -10,23 +10,25 @@ I use it only as a base environment to teach PHP in a School located in Liège, 
 
 Les versions les plus récentes disponibles au moment de la récupération des images sont toujours utilisées.
 
-Le moteur de base de données utilisé est MariaDB.
+Le moteur de bases de données utilisé est MariaDB.
 
-PHP est installé avec Composer, mais aussi git, zip, nodejs et npm 🎉. Ces deux derniers outils sont surtout là pour le cas où vous auriez besoin d’utiliser une dépendance *front*, mais dans le cadre du cours, la probabilité est assez faible.
+PHP est installé avec Composer, mais aussi git, zip, nodejs et npm 🎉. 
 
 Le dossier dans lequel vous devez coder votre application PHP est `app/`, situé à la racine de ce repo une fois cloné sur votre machine.
 
 ## Configuration
 
 **UTILISATEURS DE WINDOWS**
-Si vous avez fait le choix regrettable de travailler avec une machine qui n’est pas équipée d’un système Unix/Linux, tout n’est pas perdu. Pour faire fonctionner Docker vous avez dû activer WSL2 et installer Ubuntu comme sous-système Linux sur votre Windows. Ouf. Les commandes qui suivent sont à taper dans le terminal d’Ubuntu. Pour rappel `cd /mnt/LETTRE_DE_DISQUE/Users/VOTRE_NOM/PATH_VERS_VOTRE_PROJET` vous placera dans le bon répertoire pour la suite des opérations.
+Pour faire fonctionner Docker vous avez dû activer WSL2 et installer Ubuntu comme sous-système Linux sur votre Windows.
 
-Le fichier `docker-compose.yml` utilise une variable Unix (`PWD`) qui n’est pas reconnue dans un interpréteur de commande WINDOWS. Pensez-y !
+Les commandes qui suivent sont à taper dans le terminal d’Ubuntu. 
+
+Pour rappel `cd /mnt/LETTRE_DE_DISQUE/Users/VOTRE_NOM/PATH_VERS_VOTRE_PROJET` vous placera dans le bon répertoire pour la suite des opérations.
 
 
-La configuration de Nginx est `config/nginx/`.
+La configuration de Nginx est `config/nginx/`. Vous ne devrez pas y toucher en principe.
 
-Pour plus de facilité, un fichier d’environnement, `.env` est utilisé. Il permet de définir certaines valeurs à réutiliser dans le `docker-compose.yml`, comme par exemple, le nom du projet et les informations de connexion à la DB.
+Pour plus de facilité, un fichier d’environnement, `.env` est utilisé dans cette distribution. Il vous permet de définir certaines valeurs à réutiliser dans le `docker-compose.yml`, comme par exemple, le nom du projet et les informations de connexion à la DB. Vous pouvez en ajouter au besoin.
 
 
 | Key | Description |
@@ -36,25 +38,47 @@ Pour plus de facilité, un fichier d’environnement, `.env` est utilisé. Il pe
 
 ## Usage
 
-### Clonez ce dépôt.
+### Démarrage
 
-`git clone https://github.com/hepl-pwcs/dev-environnement.git`.
+*Ne clonez pas ce repo*. Préférez le téléchargement classique des fichiers.
 
-### Démarrez les serveurs.
+Ensuite, initialisez un repo dans le dossier récupéré (`git init`), ajoutez-y tous les fichiers (`git add .`) et définissez son *remote* (`git remote add nom-du-remote path-du-remote.git`) vers un repo github à vous. 
 
-Pour démarrer les serveurs, vous devez entrer dans le dossier créé par la commande précédente `cd dev-environnement` et instancier les conteneurs listés et configurés dans le fichier `docker-compose.yml` : `docker-compose up`.
+Vous ferez cela pour *chaque* projet. 
 
-À ce moment, vous avez accès au serveur via `http://localhost`. Vous devriez voir la page d’information de PHP dans votre navigateur.
+L’avantage est que votre code (`/app`) sera dans le repo *avec* les fichiers qui permettent à Docker de recréer son environnement d’exécution. Autrement dit, quelle que soit la machine qui devra exécuter votre code, tout fonctionnera comme sur la machine de développement. 
 
-J’ai ajouté l’application de gestion de base de données [Adminer](https://www.adminer.org) à la stack d’origine. Elle est disponible à l’adresse `http://localhost:8080`. Notez qu’elle utilise son propre moteur PHP, en version 7.4. C’est sans importance pour vos développements qui peuvent se faire pour la dernière version de PHP disponible.
+Attention que les données de la base de données ne sont pas archivées. Pensez régulièrement à `dumper` vos tables et leurs données dans un fichier sql que vous ajouterez aussi à l’archive.
 
-L’accès à MariaDB par une application externe (TablePlus, Terminal, PHPStorm, etc.) est possible via l’hôte `mariadb`, port 3306, comme d’habitude.
+### Démarrez les serveurs
+
+Pour démarrer les serveurs, vous devez entrer dans le dossier créé par la commande précédente `cd path-to/dev-environnement` et instancier les conteneurs listés et configurés dans le fichier `docker-compose.yml` : `docker-compose up`.
+
+La première fois que vous exécutez cette commande risque de prendre du temps. Les fois suivantes réutiliseront les ressources téléchargées la première fois.
+
+Une fois la commande exécutée, vous avez accès au serveur via `http://localhost`. Vous devriez alors voir la page d’information de PHP dans votre navigateur.
+
+J’ai ajouté l’application Web de gestion de base de données [Adminer](https://www.adminer.org) à la stack d’origine. Elle est accessible à l’adresse `http://localhost:8080`. Notez qu’elle utilise son propre moteur PHP, en version 7.4. C’est sans importance pour vos développements qui peuvent se faire pour la dernière version de PHP disponible.
+
+L’accès à MariaDB par une application externe (TablePlus, Terminal, PHPStorm, etc.) est aussi possible via l’hôte `127.0.0.1`, port 3306, comme d’habitude.
+
+Depuis vos scripts PHP, l’accès se fait via l’hôte `mariadb`. Un exemple de connection est disponible dans `/app`.
+
+Le mot de passe est dans le fichier d’environnement, le login est `root`.
 
 ### Un terminal ? 
 
-Attention, le terminal de votre machine tape des commandes dans le contexte de votre machine. Sur ma machine par exemple, je n’ai pas installé PHP, COMPOSER, NGINX, ou MARIADB, et j’interagis pourtant via le terminal avec tous ces logiciels. Alors, comment ? La réponse est simple, vos conteneurs embarquent un système Linux et ils ont donc un interpréteur de commande. C’est cet interpréteur qui sera votre porte d’entrée dans le conteneur.
+Le terminal de votre machine exécute normalement des commandes dans le contexte de votre machine physique. 
 
-Si vous avez besoin de taper des commandes dans le terminal d’un des conteneurs, dans le terminal de votre machine, tapez :
+Avec Docker, c’est différent : nous allons devoir exécuter des commandes dans un autre contexte, celui des conteneurs. 
+
+Voyez les conteneurs comme des espèces de micro-machines virtuelles. Ils contiennent chacun un micro Linux et savent donc interpréter des commandes.
+
+Sur ma machine physique, je n’ai pas installé PHP, COMPOSER, NGINX, ou MARIADB. Si je tape une commande qui commence par PHP dans mon terminal, celui-ci me dit qu’il ne connaît pas cette commande. 
+
+Pourtant avec mon terminal je sais quand même exécuter des commandes PHP dans le conteneur PHP.  
+
+Mon terminal me sert à envoyer des commandes à un sous-terminal qui lui, comprend les commandes. Du coup, il faut, avant de taper la commande voulue, demander à Docker de l’éxécuter pour nous dans le conteneur de notre choix.
 
 `docker exec -ti {CONTAINER_NAME} [COMMAND]` 
 
@@ -64,9 +88,9 @@ Vous devez remplacer {CONTAINER_NAME} par le nom du conteneur avec lequel vous v
 * `{APP_NAME}-nginx`
 * `{APP_NAME}-mariadb`
 
-Par exemple si votre application est nommée myapp dans le fichier d’environnement, tapez `docker exec -it myapp-php composer require nesbot/carbon` pour installer Carbon à l’aide de *composer*.
+Par exemple si votre application est nommée myapp dans le fichier d’environnement, tapez `docker exec -it myapp-php composer require nesbot/carbon` pour installer Carbon à l’aide de *composer* ou `docker exec -it myapp-php npm init` pour construire vos déclarations de dépendances *front*. Vous le voyez, c’est le conteneur PHP qui vous sera le plus utile. C’est dans celui-ci que j’ai ajouté composer, node, npm, git, afin que ce soit plus simple pour vous.
 
-La commande précédente permet d’envoyer une commande vers l’interpréteur de commandes du conteneur, mais vous restez dans le terminal de votre machine. Pour taper plusieurs commandes d’affilée, vous devez refaire toute la commande précédente ou alors, si vous souhaitez garder le terminal du conteneur ouvert, vous pouvez utiliser `docker exec -it {CONTAINER_NAME} /bin/sh`
+Vous savez donc envoyer une commande vers l’interpréteur de commandes du conteneur, mais vous restez néanmoins dans le terminal de votre machine. Pour taper plusieurs commandes d’affilée, vous devez refaire toute la commande précédente. Vous pouvez naturellement créer des alias pour vous simplifier la vie ou alors, si vous souhaitez garder le terminal du conteneur ouvert, vous pouvez utiliser `docker exec -it {CONTAINER_NAME} /bin/sh`
 
 Par exemple, 
 ```
