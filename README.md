@@ -101,7 +101,7 @@ Vous savez donc envoyer une commande vers l’interpréteur de commandes du cont
 Ceci peut s‘avérer très utile pour des processus qui doivent rester ouverts, comme par exemple `npx mix watch`.
 
 Par exemple, 
-```
+```sh
 docker exec -it myapp-mariadb /bin/sh
 mariadb --user=root --password=rootpass db_name
 ```
