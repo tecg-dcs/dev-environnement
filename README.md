@@ -68,6 +68,8 @@ Depuis vos scripts PHP, l’accès se fait via l’hôte `mariadb`. Un exemple d
 
 Le mot de passe est dans le fichier d’environnement, le login est `root`.
 
+Pour éteindre les serveurs, dans la fenêtre du terminal où les conteneurs sont actifs (c’est la fenêtre où sont affichés les `myapp-*`), pressez `CTRL+C`, comme pour interrompre la plupart des commandes exécutables dans le terminal. Vous pouvez à présent quitter Docker. Des méthodes plus brutales sont possibles, telles que quitter le terminal ou quitter simplement docker. 
+
 ### Un terminal ? 
 
 Le terminal de votre machine exécute normalement des commandes dans le contexte de votre machine physique. 
