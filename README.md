@@ -44,7 +44,7 @@ Pour plus de facilité, un fichier d’environnement, `.env` est utilisé dans c
 
 ![Téléchargez le dossier](/readme-img/download-zip.png)
 
-Ensuite, initialisez un repo dans le dossier récupéré (`git init`), ajoutez-y tous les fichiers (`git add .`) et définissez son *remote* (`git remote add nom-du-remote path-du-remote.git`) vers un repo github à vous. 
+Ensuite, si vous prévoyez d’utiliser git et github sur votre projet, initialisez un repo dans le dossier récupéré (`git init`), ajoutez-y tous les fichiers (`git add .`) et définissez son *remote* (`git remote add nom-du-remote path-du-remote.git`) vers un repo github à vous. 
 
 Vous ferez cela pour *chaque* projet. 
 
