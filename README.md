@@ -68,7 +68,9 @@ Depuis vos scripts PHP, l’accès se fait via l’hôte `mariadb`. Un exemple d
 
 Le mot de passe est dans le fichier d’environnement, le login est `root`.
 
-Pour couper les conteneurs, dans la fenêtre du terminal où les conteneurs sont actifs (c’est la fenêtre où sont affichés les `myapp-*`), pressez `CTRL+C`, comme pour interrompre la plupart des commandes exécutables dans le terminal. Vous pouvez à présent quitter Docker. Des méthodes plus brutales sont possibles, telles que quitter le terminal, éteindre les conteneurs depuis Docker ou encore simplement quitter Docker. 
+Pour couper les conteneurs, dans la fenêtre du terminal où les conteneurs sont actifs (c’est la fenêtre où sont affichés les `myapp-*`), pressez `CTRL+C`, comme pour interrompre la plupart des commandes exécutables dans le terminal. Vous pouvez à présent quitter Docker. 
+
+Des méthodes plus brutales sont possibles, telles que quitter le terminal, éteindre les conteneurs depuis Docker ou encore simplement quitter Docker. 
 
 ### Un terminal ? 
 
