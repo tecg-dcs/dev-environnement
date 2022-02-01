@@ -107,9 +107,7 @@ mariadb --user=root --password=rootpass db_name
 ```
 ou
 
-```
+```sh
 docker exec -it myapp-php /bin/sh
 npx mix watch
-```
-
 ```
