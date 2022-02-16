@@ -8,3 +8,5 @@ RUN curl --silent --show-error https://getcomposer.org/installer | php && \
 
 # Uncomment to have mysqli extension installed and enabled
 RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+
+RUN pecl install xdebug && docker-php-ext-enable xdebug
