@@ -10,6 +10,8 @@ I use it only as a base environment to teach PHP in a School located in Liège, 
 
 Avec [Lando](https://lando.dev) et les github classrooms, ce repo est devenu relativement obsolète. Il reste utile pour les étudiants qui ont un Windows Family ou Home, avec lequel Lando est incompatible. Dans leur cas, il faut d’abord récupérer la classroom (basée sur Lando) et insérer dans le repo les fichiers de cet environnement, manuellement, puis, utiliser `docker compose` plutôt que `lando`.
 
+J’ai quand même ajouté les deux ressources nécessaires à l’utilisation de Lando, à savoir un dossier .lando et le fichier .lando.yml. À vous de nettoyer le projet des fichiers inutiles si vous avez besoin d’utiliser l’une ou l’autre solution.
+
 ## Détails
 
 Les versions les plus récentes disponibles au moment de la récupération des images sont toujours utilisées.

@@ -1,0 +1,16 @@
+name: blog
+recipe: lemp
+config:
+  webroot: app
+  php: 8.1
+  xdebug: 'debug,develop,trace'
+  config:
+    php: .lando/php.ini
+services:
+  database:
+    type: mysql:8.0.28
+    portforward: true
+    creds:
+      user: mysql
+      password: mysql
+      database: blog
